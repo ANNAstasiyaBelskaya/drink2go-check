@@ -1,1 +1,12 @@
 /* здесь подключите шрифты */
+$base-font: "Montserrat Regular","Arial", sans-serif;
+$medium-font: "Montserrat Medium","Arial", sans-serif;
+$semibold-font: "Montserrat SemiBold","Arial", sans-serif;
+$bold-font: "Montserrat Bold","Arial", sans-serif;
+$italic: "Montserrat Italic", "Arial", sans-serif;
+
+@include font-face("Montserrat Regular", 400, normal, url("../../fonts/montserrat-regular.woff2") format("woff2"));
+@include font-face("Montserrat Medium", 500, normal, url("../../fonts/montserrat-medium.woff2") format("woff2"));
+@include font-face("Montserrat SemiBold", 600, normal, url("../../fonts/montserrat-semibold.woff2") format("woff2"));
+@include font-face("Montserrat Bold", 700, normal, url("../../fonts/montserrat-bold.woff2") format("woff2"));
+@include font-face("Montserrat Italic", 400, normal, url("../../fonts/montserrat-italic.woff2") format("woff2"));

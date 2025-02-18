@@ -1,0 +1,28 @@
+.pagination {
+  @include list-style;
+
+  display: flex;
+}
+// .pagination__item
+.pagination__link {
+  @include font-base ($base-font, 16px, 24px);
+  display: block;
+  width: 10px;
+  min-height: 10px;
+}
+
+.pagination__link--left {
+  background-image: url("../../icons/stack.svg#promo-arrow-left");
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+}
+
+.pagination__link--accent {
+  color: $accent-color;
+}
+// .pagination__link--current
+.pagination__link--right {
+  background-image: url("../../icons/stack.svg#promo-arrow-right");
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+}

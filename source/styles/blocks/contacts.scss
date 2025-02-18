@@ -1,0 +1,31 @@
+// .contacts {
+
+// }
+
+.contacts__address {
+  @include font-base;
+  position: relative;
+  font-style: normal;
+}
+// .contacts__address-text
+
+.contacts__address-icon {
+  display: block;
+  width: 13px;
+  height: 16px;
+  background-image: url("../../icons/stack.svg#icon-address");
+  background-repeat: no-repeat;
+}
+
+.contacts__phone {
+  display: block;
+  color: $base-color;
+}
+
+.contacts__phone-icon {
+  display: block;
+  width: 13px;
+  height: 16px;
+  background-image: url("../../icons/stack.svg#icon-phone");
+  background-repeat: no-repeat;
+}

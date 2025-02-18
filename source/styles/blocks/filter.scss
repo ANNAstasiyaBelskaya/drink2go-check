@@ -1,0 +1,10 @@
+// .filter
+// .filter__price-level
+.filter__group {
+  @include font-base($base-font, 16px, 24px);
+}
+
+.filter__group-title {
+  @include font-base($semibold-font, 16px, 24px);
+}
+// .filter__button

@@ -1,0 +1,8 @@
+// .order-info
+.order-info__price {
+  @include font-base ($semibold-font, 20px, 32px);
+}
+
+.order-info__price--old {
+  @include font-accent ($base-font, 16px, 32px, none);
+}

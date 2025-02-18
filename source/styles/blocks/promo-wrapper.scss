@@ -1,0 +1,29 @@
+.promo-wrapper {
+  padding: 20px;
+  text-align: center;
+  background-color: #f3ebe1;
+}
+
+.promo-wrapper__image {
+  margin-bottom: 10px;
+}
+
+.promo-wrapper__text {
+  @include font-accent ($bold-font);
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.promo-wrapper__title {
+  @include font-base ($bold-font, 36px, 48px);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.promo-wrapper__description {
+  @include font-base ($italic, 14px, 20px);
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+// .promo-wrapper__button
+// .promo-wrapper__link
