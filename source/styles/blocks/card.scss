@@ -1,0 +1,12 @@
+// .card
+// .card__image-link
+.card__title {
+  @include font-base ($bold-font, 18px, 32px);
+}
+// .card__description
+// .card__info
+.card__info-price {
+  @include font-base ($semibold-font, 20px, 32px);
+  letter-spacing: 0%;
+}
+// .card__info-button

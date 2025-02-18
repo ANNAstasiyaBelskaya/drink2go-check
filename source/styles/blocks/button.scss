@@ -1,0 +1,8 @@
+.button {
+  @include font-base ($base-font, 16px, 24px);
+  color: #ffffff;
+  background-color: #7859cf;
+  border: none;
+}
+// .button--submit
+// .button--reset

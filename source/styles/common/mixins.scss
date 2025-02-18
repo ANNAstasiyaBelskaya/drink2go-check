@@ -1,0 +1,31 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+@mixin font-accent ($font-family: $base-font, $font-size: 12px, $line-height: 16px, $text-transform: uppercase) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: $text-transform;
+  color: $accent-color;
+}
+
+@mixin font-base ($font-family: $base-font, $font-size: 14px, $line-height: 20px, $font-style: normal) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-style: $font-style;
+  line-height: $line-height;
+  color: $base-color;
+}
+
+@mixin list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

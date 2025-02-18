@@ -1,0 +1,27 @@
+// .page-footer
+// .page-footer__wrapper
+// .page-footer__wrapper-logo
+.page-footer__list {
+  @include list-style;
+  @include font-base ($medium-font, 12px, 16px);
+  text-transform: uppercase;
+}
+
+.page-footer__title {
+  @include font-accent ($bold-font, 14px, 20px, none);
+}
+
+// .page-footer__item
+.page-footer__link {
+  color: $base-color;
+}
+// .page-footer__contacts
+
+.page-footer__copyrights {
+  @include font-base ($base-font, 12px, 16px);
+  color: $light-gray-color;
+}
+
+.page-footer__copyrights-link {
+  color: $light-gray-color;
+}

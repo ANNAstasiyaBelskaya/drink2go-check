@@ -1,0 +1,29 @@
+// .socials
+.socials__list {
+  @include list-style;
+  display: flex;
+}
+// .socials__item
+.socials__link {
+  display: block;
+  width: 40px;
+  min-height: 40px;
+}
+
+.socials__link--vkontakte {
+  background-image: url("../../icons/stack.svg#icon-vk");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+.socials__link--pinterest {
+  background-image: url("../../icons/stack.svg#icon-pinterest");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+}
+
+.socials__link--odnoklassniki {
+  background-image: url("../../icons/stack.svg#icon-odnoklassniki");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}

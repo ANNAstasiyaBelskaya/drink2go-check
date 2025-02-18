@@ -1,7 +1,36 @@
 /* GLOBAL */
 @import "./common/variables.scss";
-@import "./common/global.scss";
+@import "./common/mixins.scss";
 @import "./common/fonts.scss";
+@import "./common/global.scss";
+@import "./common/visually-hidden.scss";
 
 /* BLOCKS */
-@import "./blocks/header.scss";
+@import "./blocks/page.scss";
+@import "./blocks/page-header.scss";
+@import "./blocks/page-header-background.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/main-navigation.scss";
+@import "./blocks/site-list.scss";
+@import "./blocks/main-container.scss";
+@import "./blocks/promo.scss";
+@import "./blocks/promo-wrapper.scss";
+@import "./blocks/order-info.scss";
+@import "./blocks/button.scss";
+@import "./blocks/features.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/filter.scss";
+@import "./blocks/level-form.scss";
+@import "./blocks/milk-filter.scss";
+@import "./blocks/control-input.scss";
+@import "./blocks/country-filter.scss";
+@import "./blocks/cards-list.scss";
+@import "./blocks/card.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/map.scss";
+@import "./blocks/page-footer.scss";
+@import "./blocks/socials.scss";
+@import "./blocks/e-shop.scss";
+@import "./blocks/media.scss";
+@import "./blocks/contacts.scss";

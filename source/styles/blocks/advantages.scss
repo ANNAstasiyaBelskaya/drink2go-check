@@ -1,0 +1,15 @@
+.advantages {
+  @include list-style;
+}
+// .advantages__item
+.advantages__item-title {
+  @include font-base ($bold-font, 18px, 32px);
+}
+
+.advantages__item-description {
+  @include font-base;
+}
+// .advantages__item-speed
+// .advantages__item-fit
+// .advantages__item-energy
+// .advantages__item-eco
