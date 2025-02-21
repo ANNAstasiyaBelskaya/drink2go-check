@@ -1,29 +1,99 @@
-// .socials
+.socials {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-flow: column wrap;
+    width: 318px;
+    min-height: 172px;
+  }
+}
+
 .socials__list {
   @include list-style;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 160px;
+  }
 }
-// .socials__item
-.socials__link {
-  display: block;
+
+.socials__item {
   width: 40px;
   min-height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: $light-lavender-color;
+  }
+
+  &:active {
+    background-color: $light-lavender-color;
+    opacity: 0.25;
+  }
+}
+
+.socials__link {
+  display: block;
+  padding: 20px;
+  align-self: center;
 }
 
 .socials__link--vkontakte {
-  background-image: url("../../icons/stack.svg#icon-vk");
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background-color: $gray-color;
+  mask-image: url("../../icons/stack.svg#icon-vk");
+  mask-repeat: no-repeat;
+  mask-size: 20px 20px;
+  mask-position: 50% 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:active {
+    background: $accent-color;
+  }
 }
 
 .socials__link--pinterest {
-  background-image: url("../../icons/stack.svg#icon-pinterest");
-  background-repeat: no-repeat;
-  background-size: 22px 22px;
+  background-color: $gray-color;
+  mask-image: url("../../icons/stack.svg#icon-pinterest");
+  mask-repeat: no-repeat;
+  mask-size: 22px 22px;
+  mask-position: 50% 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:active {
+    background-color: $accent-color;
+  }
 }
 
 .socials__link--odnoklassniki {
-  background-image: url("../../icons/stack.svg#icon-odnoklassniki");
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
+  background-color: $gray-color;
+  mask-image: url("../../icons/stack.svg#icon-odnoklassniki");
+  mask-repeat: no-repeat;
+  mask-size: 20px 20px;
+  mask-position: 50% 50%;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+
+  &:active {
+    background-color: $accent-color;
+  }
 }

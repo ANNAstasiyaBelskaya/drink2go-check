@@ -1,28 +1,81 @@
 .pagination {
   @include list-style;
-
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
 // .pagination__item
 .pagination__link {
-  @include font-base ($base-font, 16px, 24px);
+  @include font-base ($semibold-font, 16px, 24px);
   display: block;
-  width: 10px;
-  min-height: 10px;
+  box-sizing: border-box;
+  width: 40px;
+  min-height: 40px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: $base-white;
+
+  &:hover,
+  &:focus,
+  &:hover .pagination__link-description,
+  &:focus .pagination__link-description {
+    background-color: $light-accent-color;
+    color: $base-white;
+  }
+
+  &:active,
+  &:active .pagination__link-description {
+    background-color: $dark-accent-color;
+    color: $base-white;
+  }
+
+  &:disabled,
+  &:disabled .pagination__link-description {
+    background-color: $middle-gray-color;
+    color: $base-white;
+  }
+}
+
+.pagination__link-description {
+  @include font-accent ($base-font, 16px, 24px, none);
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .pagination__link--left {
-  background-image: url("../../icons/stack.svg#promo-arrow-left");
-  background-repeat: no-repeat;
-  background-size: 10px 6px;
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    background-image: url("../../icons/stack.svg#promo-arrow-left");
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: 50% 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 91px;
+  }
 }
 
 .pagination__link--accent {
+  @include font-base ($base-font, 16px, 24px);
   color: $accent-color;
 }
-// .pagination__link--current
+
 .pagination__link--right {
-  background-image: url("../../icons/stack.svg#promo-arrow-right");
-  background-repeat: no-repeat;
-  background-size: 10px 6px;
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    background-image: url("../../icons/stack.svg#promo-arrow-right");
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: 50% 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 104px;
+  }
 }

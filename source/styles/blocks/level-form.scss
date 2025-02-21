@@ -1,4 +1,21 @@
-// .level-form
-// .level-form__slider
-// .level-form__field
+.level-form {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    display: flex;
+    flex-flow: column wrap;
+  }
+}
+
+// .level-form__slider {
+//   @media (min-width: $tablet-width) and (max-width: 1439px) {
+
+//   }
+// }
+
+.level-form__field {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    display: flex;
+    flex-flow: column wrap;
+    width: 223px;
+  }
+}
 // .level-form__value
