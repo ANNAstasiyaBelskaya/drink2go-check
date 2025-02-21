@@ -1,31 +1,67 @@
-// .contacts {
+.contacts {
+  margin-bottom: 20px;
 
-// }
+  @media (min-width: $tablet-width) {
+    width: 223px;
+  }
 
-.contacts__address {
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.contacts__element {
   @include font-base;
   position: relative;
-  font-style: normal;
-}
-// .contacts__address-text
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 19px;
 
-.contacts__address-icon {
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $dark-accent-color;
+  }
+}
+
+.contacts__address {
+  position: relative;
+  font-style: normal;
+  text-transform: none;
+}
+
+.contacts h2 {
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.contacts__icon {
+  position: absolute;
   display: block;
+  content: "";
   width: 13px;
   height: 16px;
-  background-image: url("../../icons/stack.svg#icon-address");
+  top: 2px;
+  left: 0;
   background-repeat: no-repeat;
 }
 
-.contacts__phone {
+.contacts__element--phone {
   display: block;
   color: $base-color;
+  margin-bottom: 41px;
 }
 
-.contacts__phone-icon {
-  display: block;
-  width: 13px;
-  height: 16px;
+.contacts__icon--address {
+  background-image: url("../../icons/stack.svg#icon-address");
+}
+
+.contacts__icon--phone {
   background-image: url("../../icons/stack.svg#icon-phone");
-  background-repeat: no-repeat;
 }

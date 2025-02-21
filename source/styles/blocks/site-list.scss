@@ -1,7 +1,43 @@
 .site-list {
-  display: none;
+  @include list-style;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
-// .site-list__item
-// .site-list__link
-// .site-list__item--current
-// .site-list__link--accent
+
+.site-list__item {
+  box-sizing: border-box;
+}
+
+.site-list__link {
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 31px 20px;
+    box-sizing: border-box;
+    color: $base-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 32px 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:active {
+    color: $accent-color;
+    background-color: $light-lavender-color;
+  }
+}
+
+.site-list__link--accent {
+  color: $accent-color;
+}
+
+.site-list__item--current {
+  box-sizing: border-box;
+  border-bottom: 2px solid $accent-color;
+}

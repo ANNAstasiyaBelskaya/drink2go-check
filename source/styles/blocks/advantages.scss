@@ -1,15 +1,102 @@
 .advantages {
   @include list-style;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
-// .advantages__item
+
+.advantages__item {
+  position: relative;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding-top: 66px;
+  }
+
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    padding-left: 72px;
+    text-align: left;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+    padding-top: 76px;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 52px;
+    height: 56px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $mobile-width) and (max-width: 767px) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $tablet-width) and (max-width: 1439px) {
+      top: 0;
+      left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 .advantages__item-title {
-  @include font-base ($bold-font, 18px, 32px);
+  margin-top: 0;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    @include font-base ($bold-font, 18px, 32px);
+    margin-bottom: 4px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    @include font-base ($bold-font, 24px, 36px);
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 
 .advantages__item-description {
   @include font-base;
 }
-// .advantages__item-speed
-// .advantages__item-fit
-// .advantages__item-energy
-// .advantages__item-eco
+
+.advantages__item-speed::before {
+  background-image: url("../../icons/stack.svg#icon-speed");
+}
+
+.advantages__item-fit::before {
+  background-image: url("../../icons/stack.svg#icon-fit");
+}
+
+.advantages__item-energy::before {
+  background-image: url("../../icons/stack.svg#icon-energy");
+}
+
+.advantages__item-eco::before {
+  background-image: url("../../icons/stack.svg#icon-eco");
+}

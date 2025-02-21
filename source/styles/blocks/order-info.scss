@@ -1,8 +1,45 @@
-// .order-info
-.order-info__price {
-  @include font-base ($semibold-font, 20px, 32px);
+.order-info {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 230px;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-right: auto;
+  }
 }
 
 .order-info__price--old {
   @include font-accent ($base-font, 16px, 32px, none);
+}
+
+.order-info__price--new {
+  @include font-base ($semibold-font, 20px, 32px);
+}
+
+.order-info__button {
+  width: 113px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $light-accent-color;
+  }
+
+  &:active {
+    background-color: $dark-accent-color;
+  }
+
+  &:disabled {
+    background-color: $gray-color;
+  }
 }

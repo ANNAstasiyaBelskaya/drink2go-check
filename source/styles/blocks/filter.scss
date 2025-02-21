@@ -1,10 +1,120 @@
-// .filter
-// .filter__price-level
+.filter {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    display: grid;
+    grid-template-columns: 1fr 222px 1fr;
+    width: 728px;
+    gap: 30px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+}
+
+.filter__price-level {
+  border: none;
+}
+
 .filter__group {
   @include font-base($base-font, 16px, 24px);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  border: none;
 }
 
 .filter__group-title {
   @include font-base($semibold-font, 16px, 24px);
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-// .filter__button
+
+.filter__buttons-container {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding: 8px;
+    width: 280px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 auto;
+    width: 277px;
+    justify-content: space-between;
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.filter__button--submit {
+  padding: 8px 20px;
+  cursor: pointer;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    width: 280px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    width: 137px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-accent-color;
+  }
+
+  &:active {
+    background-color: $dark-accent-color;
+  }
+
+  &:disabled {
+    background-color: $gray-color;
+  }
+}
+
+.filter__button--reset {
+  padding: 8px 20px;
+  color: $accent-color;
+  background-color: $base-white;
+  cursor: pointer;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    width: 280px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    width: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-accent-color;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $dark-accent-color;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $middle-gray-color;
+    color: $base-white;
+  }
+}

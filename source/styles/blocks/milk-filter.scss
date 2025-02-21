@@ -1,6 +1,13 @@
-// .milk-filter
+.milk-filter {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    width: 222px;
+  }
+}
 
 .milk-filter__list {
   @include list-style;
 }
-// .milk-filter__list-item
+
+.milk-filter__list-item {
+  margin-bottom: 20px;
+}

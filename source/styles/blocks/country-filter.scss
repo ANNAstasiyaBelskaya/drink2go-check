@@ -1,5 +1,13 @@
-// .country-filter
+// .country-filter {
+
+// }
+
 .country-filter__list {
   @include list-style;
 }
-// .country-filter__list-item
+
+.country-filter__list-item {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-left: 52px;
+}

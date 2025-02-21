@@ -1,4 +1,9 @@
 .promo {
-  margin: 0 auto;
-}
+  width: 100%;
+  background-color: $promo-background-color;
 
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    background-image: linear-gradient($promo-background-color 75%, $base-white 25%);
+    background-repeat: no-repeat;
+  }
+}

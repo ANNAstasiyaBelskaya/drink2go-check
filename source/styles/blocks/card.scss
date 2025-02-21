@@ -1,12 +1,76 @@
-// .card
-// .card__image-link
+.card {
+  padding: 40px 20px 20px;
+  background-color: $base-white;
+  text-align: left;
+}
+
+.card__image-link {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  width: 130px;
+  height: 188px;
+}
+
+.card__image {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .card__title {
   @include font-base ($bold-font, 18px, 32px);
+  margin-top: 0;
+  margin-bottom: 4px;
 }
-// .card__description
-// .card__info
+
+.card__description {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+}
+
 .card__info-price {
   @include font-base ($semibold-font, 20px, 32px);
-  letter-spacing: 0%;
+  align-self: center;
 }
-// .card__info-button
+
+.card__info-button {
+  @include font-base ($base-font, 14px, 20px);
+  position: relative;
+  min-width: 141px;
+  min-height: 36px;
+  padding: 0 20px 0 46px;
+  box-sizing: border-box;
+  color: $base-white;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 16px;
+    top: 10px;
+    left: 20px;
+    background-image: url("../../icons/stack.svg#card-icon-basket");
+    background-repeat: no-repeat;
+    background-size: 20px 16px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $light-accent-color;
+  }
+
+  &:active {
+    background-color: $dark-accent-color;
+  }
+
+  &:disabled {
+    background-color: $gray-color;
+  }
+}
